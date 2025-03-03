@@ -78,9 +78,10 @@ def identify_instrument_from_mistral(filename_text):
     prompt = f"""
     Analyze the following music score filename and determine which musical instrument 
     part this is. Return only the name of the instrument or instrument section (e.g., "Violin 1", "Violin 2","Flute 1", "Horn 1","Horn 2" etc.). 
-    If no instrument section is found, just return the name of the instrument
+    If no instrument section is found, just return the name of the instrument.
     Only return the instrument name in a word, not any other.
-    Do not say any thinking process
+    If the part contains multiple instruments like Flute 1 & Flute 2, also write in the file name, like: Flute 1 & Flute 2.
+    Do not say any thinking process.
     File Name: {filename_text}
     """
     
